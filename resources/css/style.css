@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.left, .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    position: relative;
+    min-height: 100vh;
+}
+
+.left {
+    text-align: center;
+    background: white;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.left h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.left p {
+    font-size: 1rem;
+    color: #666;
+    margin: 20px 0;
+}
+
+.left .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    max-width: 50%;
+}
+
+.left a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    transition: 300ms all ease-in;
+}
+
+.register {
+    background-color: #333;
+}
+
+.register:hover {
+    background-color: #1c1c1c;
+}
+
+.queue {
+    background-color: #3498db;
+}
+
+.queue:hover {
+    background-color: #2980b9;
+}
+
+.right {
+    background: url('../img/bg.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    html {
+        height: 100%;
+    }
+    body {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background: url('../img/bg.jpg') no-repeat center center/cover;
+    }
+    .container {
+        display: flex;
+        align-self: center;
+        justify-self: center;
+        width: 95vh;
+        height: 95vh;
+        margin: 0px auto;
+    }
+    .left, .right {
+        flex: none;
+        width: 100%;
+        min-height: 50vh;
+    }
+    .right {
+        display: none;
+    }
+    .left .buttons {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+    }
+}
